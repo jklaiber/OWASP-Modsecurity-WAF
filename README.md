@@ -1,8 +1,8 @@
-# OWASP-Modsecurity-WAF
-OWASP Modsecurity Web Application Firewall on Ubuntu 12.04
+# OWASP-ModSecurity-WAF
+OWASP ModSecurity Web Application Firewall on **Ubuntu 12.04**
 ![alt text](https://www.owasp.org/images/f/f9/CRS-logo-full_size-512x257.png "OWASP Logo")  
 For further instructions: **[Official OWASP Project Website](https://coreruleset.org/)**
-## Installation Modsecurity
+## Installation ModSecurity
 update and install build-tools and dependencies
 ```
 $ sudo apt-get update && sudo apt-get upgrade
