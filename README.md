@@ -85,3 +85,27 @@ reload Apache2
 ```
 $ sudo service apache2 restart
 ```
+## Enable ModSecurity
+turn on ModSecurity
+```
+$ sudo nano /etc/modsecurity/modsecurity.conf
+```
+change `SecRuleEngine DetectionOnly` to `SecRuleEngine On`
+
+## Testing
+Open a Webbrowser and type in the following:  
+
+`<example.com>/aphpfilethatdonotexist.php?something=../../etc`  
+
+Check the `modsec_audit.log`
+```
+$ less /var/log/modsec_audit.log
+```
+You should now see something similar like this:
+```
+Message: Warning. Pattern match "^[\\d.:]+$"
+...
+[msg "Path Traversal Attack (/../)"] [data "Matched Data: /../ found within REQUEST_URI_RAW: /aphpfilethatdonotexist.php?something=../../etc"] [severity "CRITICAL"]
+...
+```
+When you see something like this ModSecurity is working.
