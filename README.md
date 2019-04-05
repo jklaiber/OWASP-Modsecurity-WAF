@@ -78,7 +78,7 @@ install the Open Web Application Security Project (OWASP) Core Rule Set
 $ wget https://github.com/SpiderLabs/owasp-modsecurity-crs/archive/v3.0/master.zip
 $ unzip master.zip
 $ sudo cp -r owasp-modsecurity-crs-3.0-master/* /etc/modsecurity/
-$ sudo cp /etc/modsecurity/crs_setup.conf.example /etc/modsecurity/crs_setup.conf
+$ sudo cp /etc/modsecurity/crs-setup.conf.example /etc/modsecurity/crs-setup.conf
 ```
 add the rules to Apache2
 ```
